@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         String info = stageOneFragment.getInfo();
         String id = stageTwoFragment.getCode_num() + "";
         final_Message = id + " " + info.toUpperCase();
+        SaveUserInfo(stageOneFragment.getLast_name(), stageOneFragment.getLast_name(), stageOneFragment.getAddress());
         //Log.i("MainActivity", "Permission has already been granted");
         smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage(phoneNumber, null, final_Message, null, null);
