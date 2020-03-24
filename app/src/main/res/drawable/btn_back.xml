@@ -5,10 +5,10 @@
 
             <gradient
                 android:angle="225"
-                android:startColor="#205890"
-                android:endColor="#205890"/>
+                android:startColor="@color/colorSecond"
+                android:endColor="@color/colorSecond"/>
 
-            <solid android:color="#205890"/>
+            <solid android:color="@color/colorSecond"/>
             <corners
                 android:bottomLeftRadius="24dp"
                 android:bottomRightRadius="24dp"
@@ -21,10 +21,10 @@
 
             <gradient
                 android:angle="225"
-                android:startColor="#FFAA5E"
-                android:endColor="#FFAA5E"/>
+                android:startColor="@color/colorPrimary"
+                android:endColor="@color/colorPrimary"/>
 
-            <solid android:color="#FFAA5E"/>
+            <solid android:color="@color/colorPrimary"/>
             <corners
                 android:bottomLeftRadius="24dp"
                 android:bottomRightRadius="24dp"

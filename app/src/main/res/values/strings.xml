@@ -16,7 +16,7 @@
 ανάγκες κατοικιδίου ζώου.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="USER_FILE_INFO">user_file_info.txt</string>
 
 
 </resources>
