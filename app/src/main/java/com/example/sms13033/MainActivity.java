@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
         button_next = findViewById(R.id.button_next_stage);
-        btn = findViewById(R.id.button);
+       // btn = findViewById(R.id.button);
         fragmentManager = getSupportFragmentManager();
 
         /*String name = globalClass.getFirst_name();
@@ -86,12 +86,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        btn.setOnClickListener(new View.OnClickListener() {
+       /* btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SaveUserInfo(stageOneFragment.getLast_name(), stageOneFragment.getLast_name(), stageOneFragment.getAddress());
             }
-        });
+        });*/
 
     }
 
