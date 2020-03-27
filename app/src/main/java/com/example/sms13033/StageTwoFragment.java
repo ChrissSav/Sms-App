@@ -43,28 +43,9 @@ public class StageTwoFragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 radioButton = view.findViewById(checkedId);
-                switch (checkedId) {
-                    case R.id.StageTwoFragment_radio_b1:
-                        code_num = 1;
-                        break;
-                    case R.id.StageTwoFragment_radio_b2:
-                        code_num = 2;
-                        break;
-                    case R.id.StageTwoFragment_radio_b3:
-                        code_num = 3;
-                        break;
-                    case R.id.StageTwoFragment_radio_b4:
-                        code_num = 4;
-                        break;
-                    case R.id.StageTwoFragment_radio_b5:
-                        code_num = 5;
-                        break;
-                    case R.id.StageTwoFragment_radio_b6:
-                        code_num = 6;
-                        break;
 
-                }
-                // Log.i("StageTwoFragment", "checkedId " + radioButton.getid);
+                code_num = Integer.parseInt(radioButton.getTag().toString());
+
                 text = radioButton.getText().toString();
             }
         });

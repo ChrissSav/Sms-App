@@ -54,25 +54,20 @@ public class MainActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
         button_next = findViewById(R.id.button_next_stage);
-       // btn = findViewById(R.id.button);
         fragmentManager = getSupportFragmentManager();
 
-        /*String name = globalClass.getFirst_name();
-        String last = globalClass.getLast_name();
-        String ad = globalClass.getAddress();*/
-        // Log.i("globalClass", "globalClass:" + globalClass.getAddress());
+
+
+        fra = stageOneFragment;
+        fragmentManager.beginTransaction().replace(R.id.fragment_container, fra).commit();
+
         if (globalClass.isOk()) {
-            /*Toast.makeText(getApplicationContext(), "name : " + name+
-                            "\nlast : " + last
-                            + "\nAddress :" + ad,
-                    Toast.LENGTH_LONG).show();*/
             fra = stageTwoFragment;
             button_next.setText("Αποστολή");
             progressBar.setProgress(80);
-        } else {
-            fra = stageOneFragment;
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, fra).commit();
+
         }
-        fragmentManager.beginTransaction().replace(R.id.fragment_container, fra).commit();
         button_next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (fra.toString().equals("StageOneFragment") && stageOneFragment.Check()) {
@@ -86,12 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-       /* btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SaveUserInfo(stageOneFragment.getLast_name(), stageOneFragment.getLast_name(), stageOneFragment.getAddress());
-            }
-        });*/
+
 
     }
 
@@ -130,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         String info = stageOneFragment.getInfo();
         String id = stageTwoFragment.getCode_num() + "";
         final_Message = id + " " + info.toUpperCase();
-        SaveUserInfo(stageOneFragment.getLast_name(), stageOneFragment.getLast_name(), stageOneFragment.getAddress());
+        SaveUserInfo(stageOneFragment.getFirst_name(), stageOneFragment.getLast_name(), stageOneFragment.getAddress());
         //Log.i("MainActivity", "Permission has already been granted");
         smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage(phoneNumber, null, final_Message, null, null);
