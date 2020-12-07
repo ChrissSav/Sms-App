@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <integer name="anim_duration">500</integer>
+    <integer name="anim_duration">250</integer>
 
     <dimen name="margin_top">80dp</dimen>
 
